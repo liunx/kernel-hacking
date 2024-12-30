@@ -9,7 +9,7 @@
 #include <signal.h>
 #include <unistd.h>
 
-#define MEM_SIZE (1 << 16)
+#define MEM_SIZE (1 << 26)
 static const char *dev_path = "/dev/mmap_dev";
 
 int main(int argc, const char **argv)

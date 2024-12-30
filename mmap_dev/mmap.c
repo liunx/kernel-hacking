@@ -38,7 +38,8 @@ static vm_fault_t vma_fault(struct vm_fault *vmf)
 	// page = alloc_pages(GFP_KERNEL, ORDER);
 	if (!page) {
 		BUG_ON(page == NULL);
-		return VM_FAULT_NOPAGE;
+		// return VM_FAULT_NOPAGE;
+		return VM_FAULT_OOM;
 	}
 	vmf->page = page;
 	get_page(vmf->page);
